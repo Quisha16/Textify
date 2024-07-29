@@ -8,7 +8,7 @@ function App() {
     <>
       <Navbar title="Textify" />
       <div className="container my-5">
-        <TextBox heading="Enter the text you want to transform..." />
+        <TextBox heading="Input your text to get started..." />
       </div>
     </>
   );
