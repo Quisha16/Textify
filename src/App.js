@@ -11,7 +11,7 @@ function App() {
       <div className="container my-5">
         <Routes>
           <Route
-            path="/Textify"
+            path="/"
             element={<TextBox heading="Input your text to get started..." />}
           />
           <Route path="/about" element={<AboutUs />} />
