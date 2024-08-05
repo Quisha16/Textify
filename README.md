@@ -10,3 +10,7 @@ This project is an excellent starting point for anyone new to React, showcasing 
 - **Enhanced Functionality**: Copy text to clipboard, download it as a .txt file, or use text-to-speech.
 - **Responsive Design**: The app is designed to be usable on both desktop and mobile devices.
 
+
+## Demo 
+https://github.com/user-attachments/assets/bb0892c4-56fa-43c5-900e-18719386407c
+
