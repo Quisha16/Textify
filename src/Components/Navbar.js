@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { NavLink } from "react-router-dom"; // Import NavLink from react-router-dom
+import { NavLink } from "react-router-dom";
 
 export default function Navbar(props) {
   return (
@@ -23,26 +23,12 @@ export default function Navbar(props) {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <NavLink
-                className="nav-link"
-                aria-current="page"
-                to="/"
-                end
-                style={({ isActive }) => ({
-                  fontWeight: isActive ? "bold" : "normal",
-                })}
-              >
+              <NavLink className="nav-link" aria-current="page" to="/" end>
                 Home
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink
-                className="nav-link"
-                to="/about"
-                style={({ isActive }) => ({
-                  fontWeight: isActive ? "bold" : "normal",
-                })}
-              >
+              <NavLink className="nav-link" to="/about">
                 {props.aboutUs}
               </NavLink>
             </li>
@@ -53,14 +39,12 @@ export default function Navbar(props) {
   );
 }
 
-// Declare the type of props that will be sent
 Navbar.propTypes = {
   title: PropTypes.string.isRequired,
   aboutUs: PropTypes.string.isRequired,
 };
 
-// In case props are not passed, this will be the default
 Navbar.defaultProps = {
-  title: "Textify",
-  aboutUs: "About Us",
+  title: "SetTitleHere",
+  aboutUs: "About",
 };

@@ -6,13 +6,12 @@ import TextBox from "./Components/TextBox";
 
 function App() {
   return (
-    // Wrap the entire application with Router for routing functionality
     <Router>
-      <Navbar title="Textify" />
+      <Navbar title="Textify" aboutUs="About" />
       <div className="container my-5">
         <Routes>
           <Route
-            path="/"
+            path="/Textify"
             element={<TextBox heading="Input your text to get started..." />}
           />
           <Route path="/about" element={<AboutUs />} />
