@@ -36,3 +36,29 @@
     transform: rotate(360deg);
   }
 }
+
+/* TextBox.css */
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem; /* Adjust the gap between buttons */
+}
+
+.btn {
+  flex: 1;
+  min-width: 100px; /* Minimum width for buttons */
+}
+
+/* Optional: Make buttons stack vertically on very small screens */
+@media (max-width: 576px) {
+  .button-group {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%; /* Full width on small screens */
+    margin-bottom: 0.5rem; /* Space between buttons */
+  }
+}
+
