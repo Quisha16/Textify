@@ -1,8 +1,5 @@
 # Textify
 
-## Demo
-You can view the Textify app here: [Textify](https://quisha16.github.io/Textify/)
-
 ## Overview
 Textify is a beginner-friendly React application designed for text manipulation. It allows users to convert text to different formats, such as uppercase, lowercase, and capitalized. The app also provides functionalities for copying text to the clipboard, downloading it as a .txt file, and converting it to speech.
 
