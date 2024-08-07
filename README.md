@@ -9,4 +9,3 @@ This project is an excellent starting point for anyone new to React, showcasing 
 - **Effortless Text Transformation**: Convert text to uppercase, lowercase, or capitalize each word.
 - **Enhanced Functionality**: Copy text to clipboard, download it as a .txt file, or use text-to-speech.
 - **Responsive Design**: The app is designed to be usable on both desktop and mobile devices.
-
