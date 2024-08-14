@@ -80,7 +80,7 @@ export default function TextBox(props) {
   const timeToReadSeconds = (0.47 * wordCount).toFixed(2);
 
   return (
-    <div className="container">
+    <div className="container" style={{color: props.mode==='dark'?'white':'black'}}>
       <h4>{props.heading}</h4>
       <div className="mb-3">
         <textarea
@@ -90,6 +90,7 @@ export default function TextBox(props) {
           rows="8"
           value={Text}
           placeholder="Enter text here"
+          style={{backgroundColor: props.mode==='dark'?'grey':'white'}}
         ></textarea>
       </div>
       <div className="button-group">
@@ -135,7 +136,7 @@ export default function TextBox(props) {
         </p>
         <div className="container my-5">
           <h4>Preview</h4>
-          <p className="bg-light text-dark">{Text}</p>
+          <p className="bg-light text-dark">{Text.length>0? Text: 'Type in the box above to preview your text here. '  }</p>
         </div>
       </div>
     </div>
