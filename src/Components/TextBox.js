@@ -3,7 +3,7 @@ import "../App.css"; // Import custom CSS file if needed
 
 export default function TextBox(props) {
   const [Text, setText] = useState("");
-  const [isSpeechEnabled, setIsSpeechEnabled] = useState(false);  // Initially off
+  const [isSpeechEnabled, setIsSpeechEnabled] = useState(false); // Initially off
 
   const handleUpClick = () => {
     let upperText = Text.toUpperCase();
@@ -88,7 +88,10 @@ export default function TextBox(props) {
   const timeToReadSeconds = (0.47 * wordCount).toFixed(2);
 
   return (
-    <div className="container" style={{color: props.mode==='dark'?'white':'black'}}>
+    <div
+      className="container"
+      style={{ color: props.mode === "dark" ? "white" : "black" }}
+    >
       <h4>{props.heading}</h4>
       <div className="mb-3">
         <textarea
@@ -98,7 +101,7 @@ export default function TextBox(props) {
           rows="8"
           value={Text}
           placeholder="Enter text here"
-          style={{backgroundColor: props.mode==='dark'?'grey':'white'}}
+          style={{ backgroundColor: props.mode === "dark" ? "grey" : "white" }}
         ></textarea>
       </div>
       <div className="button-group">
@@ -130,9 +133,9 @@ export default function TextBox(props) {
           aria-label="Toggle Speak"
           style={{ fontSize: "24px", cursor: "pointer" }}
         >
-          {isSpeechEnabled ? "🔊" : "🔇"} {/* Toggle emoji based on speech state */}
+          {isSpeechEnabled ? "🔊" : "🔇"}{" "}
+          {/* Toggle emoji based on speech state */}
         </span>
-        
       </div>
       <div className="container my-5">
         <h4>Text Overview</h4>
@@ -145,7 +148,11 @@ export default function TextBox(props) {
         </p>
         <div className="container my-5">
           <h4>Preview</h4>
-          <p className="bg-light text-dark">{Text.length>0? Text: 'Type in the box above to preview your text here. '  }</p>
+          <p className="bg-light text-dark">
+            {Text.length > 0
+              ? Text
+              : "Type in the box above to preview your text here. "}
+          </p>
         </div>
       </div>
     </div>
