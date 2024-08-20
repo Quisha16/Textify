@@ -3,6 +3,7 @@ import "../App.css"; // Import custom CSS file if needed
 
 export default function TextBox(props) {
   const [Text, setText] = useState("");
+  const [isSpeechEnabled, setIsSpeechEnabled] = useState(false);  // Initially off
 
   const handleUpClick = () => {
     let upperText = Text.toUpperCase();
@@ -61,15 +62,22 @@ export default function TextBox(props) {
     }
   };
 
-  const handleSpeak = () => {
-    if ("speechSynthesis" in window) {
+  // const handleSpeak = () => {
+  //   if ("speechSynthesis" in window) {
+  //     const utterance = new SpeechSynthesisUtterance(Text);
+  //     window.speechSynthesis.speak(utterance);
+  //   } else {
+  //     alert("Sorry, your browser does not support text-to-speech.");
+  //   }
+  // };
+  const handleToggleSpeech = () => {
+    setIsSpeechEnabled(!isSpeechEnabled); // Toggle speech on/off
+
+    if (!isSpeechEnabled && "speechSynthesis" in window) {
       const utterance = new SpeechSynthesisUtterance(Text);
       window.speechSynthesis.speak(utterance);
-    } else {
-      alert("Sorry, your browser does not support text-to-speech.");
     }
   };
-
   const handleOnChange = (event) => {
     setText(event.target.value);
   };
@@ -117,13 +125,14 @@ export default function TextBox(props) {
         </button>
         <span
           className="emoji-btn mx-1"
-          onClick={handleSpeak}
+          onClick={handleToggleSpeech} // Toggle speech on/off
           role="button"
-          aria-label="Speak"
+          aria-label="Toggle Speak"
           style={{ fontSize: "24px", cursor: "pointer" }}
         >
-          🔊
+          {isSpeechEnabled ? "🔊" : "🔇"} {/* Toggle emoji based on speech state */}
         </span>
+        
       </div>
       <div className="container my-5">
         <h4>Text Overview</h4>
